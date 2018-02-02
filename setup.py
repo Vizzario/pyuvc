@@ -21,8 +21,8 @@ library_dirs = []
 include_dirs = [numpy.get_include()]
 if platform.system() == 'Darwin':
     libs = ['turbojpeg', 'uvc.0.0.7']
-    include_dirs += ['/usr/local/opt/jpeg-turbo/include/']
-    library_dirs += ['/usr/local/opt/jpeg-turbo/lib/']
+    include_dirs += ['/usr/local/opt/jpeg-turbo/include/', '/opt/local/include/', '/opt/libjpeg-turbo/include/']
+    library_dirs += ['/usr/local/opt/jpeg-turbo/lib/', '/opt/local/lib', '/opt/libjpeg-turbo/lib']
 elif platform.system() == 'Linux':
     libs = ['rt', 'uvc','turbojpeg']
 elif platform.system() == 'Windows':
